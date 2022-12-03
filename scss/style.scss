@@ -1,0 +1,609 @@
+@font-face {
+    font-family: iransans;
+    src: url(../fonts/FontsFree-Net-ir_sans.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: iransans;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@mixin width($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    >section:nth-of-type(1) {
+
+
+
+        section:nth-of-type(1) {
+
+            a:nth-of-type(1) {
+                @include width(50px, 50px);
+                padding: 5px;
+
+
+                span {
+                    @include width(100%, 100%);
+                    display: block;
+                    transform: rotate(90deg);
+                    font-size: 2.5rem;
+                }
+            }
+
+            a:nth-of-type(2) {
+                @include width(100px, 60px);
+
+            }
+
+            a:nth-of-type(3) {
+                @include width(70px, 60px);
+
+                position: relative;
+
+                i {
+                    font-size: 2.5rem;
+
+                }
+
+                span {
+                    position: absolute;
+                }
+            }
+
+            a:nth-of-type(4) {
+                transition: .4s;
+
+                &:hover {
+                    color: rgb(68, 68, 68);
+                }
+            }
+
+
+            @media screen and (max-width:1300px) {
+                a:nth-of-type(4) {
+                    font-size: .7rem;
+                }
+            }
+
+        }
+
+        section:nth-of-type(2) {
+            height: 60px;
+
+            section:nth-of-type(1) {
+                cursor: pointer;
+                background-color: #e7e7e7;
+
+                p {
+                    font-size: .8rem;
+
+                    span {
+                        transform: rotate(90deg);
+                        display: inline-block;
+                        padding: 10px;
+                        font-size: 1.1rem;
+                    }
+                }
+
+                span {
+                    padding: 10px;
+                    font-size: 1.1rem;
+                }
+            }
+
+            section:nth-of-type(2) {
+
+                nav {
+                    a {
+                        font-size: .7rem;
+                    }
+                }
+            }
+
+            section:nth-of-type(3) {
+                button {
+                    font-size: .8rem;
+                }
+
+                a {
+                    @include width(40px, 40px);
+
+                    position: relative;
+                    line-height: 40px;
+
+                    i {
+                        font-size: 1.3rem;
+
+                    }
+
+                    span {
+                        position: absolute;
+                    }
+                }
+
+                p {
+                    font-size: .7rem;
+                }
+            }
+        }
+
+
+    }
+
+
+    >section:nth-of-type(2) {
+        position: fixed;
+        @include width(100vw, 100vh);
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: .5s;
+        opacity: 0;
+        visibility: hidden;
+
+        // position: relative;
+        >section:nth-of-type(1) {
+
+            z-index: 1;
+            @include width(100vw, 100vh);
+            background-color: rgba(0, 0, 0, 0.329);
+            right: 0;
+            position: fixed;
+        }
+
+        >section:nth-of-type(2) {
+
+            z-index: 3;
+            @include width(400px, 100vh);
+            background-color: rgba(0, 0, 0, 0.694);
+            right: 0;
+            position: fixed;
+
+            >div:nth-of-type(1) {
+
+
+                >div:nth-of-type(2) {
+                    cursor: pointer;
+                }
+            }
+
+            >div:nth-of-type(2){
+                transform: translateX(100%);
+                margin-top: 50px;
+            }
+        }
+
+
+        
+    }
+
+}
+
+main {
+
+    margin-top: 60px;
+
+    @media screen and (min-width:992px) {
+        margin-top: 138px;
+    }
+
+    >div {
+        position: fixed;
+        bottom: 0;
+        height: 60px;
+        z-index: 1;
+
+        section {
+
+            height: 100%;
+
+            section {
+
+
+                a {
+
+                    font-size: 1.5rem !important;
+
+
+                }
+            }
+        }
+
+
+    }
+
+    >section:nth-of-type(1) {
+
+        >section:nth-of-type(1) {
+            background-color: whitesmoke;
+
+            >a {
+                font-size: .8rem;
+                transition: .4s;
+
+                &:hover {
+                    box-shadow: 0 0 5px gray;
+                }
+            }
+        }
+
+        // Shoes----------------
+
+        >section:nth-of-type(2) {
+
+            >section {
+                position: relative;
+
+                >a {
+                    transition: .4s;
+                    border: none;
+
+
+
+                    &:hover>div:nth-of-type(2) {
+                        color: black;
+                    }
+
+                    @media screen and (min-width:992px) {
+                        &:hover>section:nth-of-type(2) {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+
+
+
+                    >div:nth-of-type(1) {
+                        @include width(200px, 200px);
+
+                        background-size: cover;
+                        margin: auto;
+                        transition: .7s;
+
+                        @media screen and (min-width:1200px) {
+                            @include width(280px, 250px);
+                        }
+
+
+
+                    }
+
+                    // >div:nth-of-type(2){
+
+
+                    // }
+
+
+                    >section:nth-of-type(1) {
+                        position: absolute;
+                        @include width(100px, 40px);
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 20px;
+                        top: 50%;
+                        right: 27%;
+                        box-shadow: 0 0 5px gray;
+
+                        >button {
+                            width: 50%;
+                            height: 100%;
+                        }
+                    }
+
+                    >section:nth-of-type(2) {
+                        position: absolute;
+                        @include width(160px, 40px);
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 2px;
+                        top: 55%;
+                        right: 20%;
+                        box-shadow: 0 0 5px gray;
+                        transition: .5s;
+                        opacity: 0;
+                        visibility: hidden;
+
+                        >button {
+                            width: 25%;
+                            height: 100%;
+                            padding: 8px;
+
+                            >i {
+                                font-size: 1.5rem;
+
+                            }
+                        }
+
+                        @media screen and (min-width:1400px) {
+                            top: 60%;
+                            right: 30%;
+                        }
+                    }
+
+                    >section:nth-of-type(3) {
+                        position: absolute;
+                        top: 0;
+                        transition: .5s;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+
+
+            }
+
+            >section:nth-of-type(1) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/1.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/1-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(2) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/2.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/2-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(3) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/3.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/3-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(4) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/4.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/4-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(5) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/5.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/5-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(6) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/6.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/6-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(7) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/7.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/7-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(8) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/8.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/8-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(9) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/9.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/9-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(10) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/10.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/10-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(11) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/11.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/11-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            >section:nth-of-type(12) {
+
+                >a {
+                    >div:nth-of-type(1) {
+                        background-image: url(../img/shoes/12.jpg);
+
+                        @media screen and (min-width:992px) {
+                            &:hover {
+                                background-image: url(../img/shoes/12-hover.jpg);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        >span{
+            display: block;
+            @include width(100%,100vh );
+            background-color: rgba(0, 0, 0, 0.335);
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    >section:nth-of-type(2) {
+        @include width(400px, 100vh);
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: .5s;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+
+        
+
+        >div {
+            >div:nth-of-type(2) {
+                cursor: pointer;
+
+                >i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        >section:nth-of-type(1) {
+            overflow-y: scroll;
+        }
+
+        >section:last-child {
+            position: fixed;
+            bottom: 2%;
+        }
+
+
+        
+    }
+
+    
+}
